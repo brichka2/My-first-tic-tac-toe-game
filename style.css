@@ -1,0 +1,82 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --light-purple: #C999FF;
+    --darker-blue: #004C99;
+    --winning-blocks: #24e7d6;
+}
+
+body {
+    color: var(--light-purple);
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1 {
+    font-size: 54px;
+    text-transform: uppercase;
+    color: var(--light-purple);
+    text-shadow: 0 0 10px var(--light-purple), 0 0 20px var(--light-purple);
+    box-shadow: 0 0 10px var(--light-purple);
+}
+
+.container {
+    padding: 40px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--darker-blue);
+    background-image: radial-gradient(var(--light-purple) 1px, transparent 1px), radial-gradient(var(--light-purple) 1px, transparent 1px);
+    background-position: 0 0, 25px 25px;
+    background-size: 50px 50px;
+}
+
+#gameboard {
+    width: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.fieldbox {
+    height: 100px;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--light-purple);
+    font-size: 120px;
+    border-right: 2px solid;
+    border-bottom: 2px solid;
+    text-shadow: 0 0 10px var(--light-purple);
+}
+
+.fieldbox:nth-child(3n) {
+    border-right: none;
+}
+
+.fieldbox:nth-child(6)~.fieldbox {
+    border-bottom: none;
+}
+
+button {
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: var(--light-purple);
+    color: #333;
+    border-color: var(--light-purple);
+    font-size: 18px;
+    transition: 200ms transform;
+    font-weight: 600;
+}
+
+button:hover {
+    cursor: pointer;
+    transform: translateY(-2px);
+    box-shadow: 0px 0px 10px var(--darker-blue);
+}
